@@ -1,6 +1,5 @@
 // Flutter
 import 'package:flutter/material.dart';
-
 void main() => runApp(const Login());
 
 class Login extends StatelessWidget {
@@ -21,7 +20,7 @@ class Login extends StatelessWidget {
         //   backgroundColor: Colors.purple,
         // ),
         body: Container(
-          color: Colors.indigoAccent,
+          color: Colors.indigo,
           // decoration: const BoxDecoration(
           //   image: DecorationImage(
           //     image: AssetImage(
@@ -72,6 +71,7 @@ class Login extends StatelessWidget {
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                       labelText: 'Email',
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
                       filled: true,
                       fillColor: Colors.white,
                       floatingLabelStyle:
@@ -105,6 +105,7 @@ class Login extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
                       floatingLabelStyle:
                           const TextStyle(color: Colors.black, fontSize: 24),
                       labelText: 'Password',

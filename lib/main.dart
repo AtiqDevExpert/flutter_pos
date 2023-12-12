@@ -1,96 +1,135 @@
 // Flutter
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_pos/splash.dart';
 
-void main() => runApp(const MyApp());
+void main(){
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+  runApp(myFlutterApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class myFlutterApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bnody POS',
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          resizeToAvoidBottomInset: true,
-          appBar: AppBar(
-            title: const Text(
-              'Bnody POS',
-              style: TextStyle(
-                  color: Colors.indigoAccent,
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold),
-            ),
-            backgroundColor: Colors.indigoAccent,
-          ),
-          body: Container(
-            color: Colors.blue,
-            height: 100,
-            // margin: const EdgeInsets.only(left: 50, right: 50),
-            child: const Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Home',
-                        style: TextStyle(fontSize: 16, color: Colors.white)),
-                    Text(
-                      'Terminal Code #3',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    ),
-                    Text(
-                      'logout',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  // mainAxisSize: MainAxisSize.max,
-                  children: [
-                    // TextField(
-                    //   onChanged: (text) {
-                    //     print(text);
-                    //   },
-                    //   keyboardType: TextInputType.name,
-                    //   decoration: InputDecoration(
-                    //     labelText: 'Email',
-                    //     filled: true,
-                    //     fillColor: Colors.white,
-                    //     floatingLabelStyle:
-                    //         const TextStyle(color: Colors.black, fontSize: 24),
-                    //     hintText: AutofillHints.username,
-                    //     hintStyle: const TextStyle(
-                    //         color: Colors.black26, fontSize: 14),
-                    //     labelStyle: const TextStyle(color: Colors.black),
-                    //     focusedBorder: OutlineInputBorder(
-                    //       borderRadius: BorderRadius.circular(10.0),
-                    //       borderSide: const BorderSide(color: Colors.white),
-                    //     ),
-                    //     enabledBorder: OutlineInputBorder(
-                    //       borderRadius: BorderRadius.circular(10.0),
-                    //       borderSide: const BorderSide(color: Colors.white),
-                    //     ),
-                    //     border: OutlineInputBorder(
-                    //       borderRadius: BorderRadius.circular(10.0),
-                    //       borderSide:
-                    //           const BorderSide(color: Colors.black, width: 1),
-                    //     ),
-                    //   ),
-                    // ),
-                  ],
-                ),
-              ],
-            ),
 
-            // decoration: const BoxDecoration(
-            //   image: DecorationImage(
-            //     image: AssetImage(
-            //         'assets/images/background.png'),
-            //     fit: BoxFit.cover,
-            //   ),
-            // ),
-          )),
+    return MaterialApp(
+      title: 'New App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.indigo
+      ),
+      home:Splash(),
     );
   }
+
+}
+
+class SpalshScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(
+         backgroundColor: Colors.red,
+       title:Text('Bnody HR', style: TextStyle(fontSize: 16,color: Colors.black,fontWeight: FontWeight.bold),) ,
+     ),
+     body: Container(
+       color: Colors.blue.shade50,
+
+     ),
+   );
+  }
+
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+     body: Container(
+       child: Center(
+
+         child:Column(
+           children: [
+             Padding(padding: const EdgeInsets.only(
+             bottom: 50, left: 50, right: 50, top: 50),child: Container(
+                 // height: 150,width: 150,
+                 decoration: BoxDecoration(
+
+                   color: Colors.blue.shade50,
+                   // borderRadius: BorderRadius.circular(10.0),
+                   border: Border.all(width: 0.5,color: Colors.red),
+                   shape: BoxShape.rectangle,
+                   boxShadow: [
+                     BoxShadow(color: Colors.blue.shade200,
+                         blurRadius: 11,
+                         spreadRadius: 7
+                     ),
+                   ],
+
+                 ),
+                 child:Center(
+                     child: Text(
+                         'This is dummy box'
+                     )
+                 )
+             ),),
+
+             Padding(padding: const EdgeInsets.only(
+                 bottom: 50, left: 50, right: 50, top: 50),child: Container(
+                 height: 150,width: 150,
+                 decoration: BoxDecoration(
+
+                   color: Colors.blue.shade50,
+                   // borderRadius: BorderRadius.circular(10.0),
+                   border: Border.all(width: 0.5,color: Colors.red),
+                   shape: BoxShape.circle,
+                   boxShadow: [
+                     BoxShadow(color: Colors.blue.shade200,
+                         blurRadius: 11,
+                         spreadRadius: 7
+                     ),
+                   ],
+
+                 ),
+                 child:Center(
+                     child: Text(
+                         'This is dummy box'
+                     )
+                 )
+             ),),
+             Padding(padding: const EdgeInsets.only(
+                 bottom: 50, left: 50, right: 50, top: 50),child: Container(
+                 height: 150,width: 150,
+                 decoration: BoxDecoration(
+
+                   color: Colors.blue.shade50,
+                   // borderRadius: BorderRadius.circular(10.0),
+                   border: Border.all(width: 0.5,color: Colors.red),
+                   shape: BoxShape.rectangle,
+                   boxShadow: [
+                     BoxShadow(color: Colors.blue.shade200,
+                         blurRadius: 11,
+                         spreadRadius: 7
+                     ),
+                   ],
+
+                 ),
+                 child:Center(
+                     child: Text(
+                         'This is dummy box'
+                     )
+                 )
+             ),),
+           ],
+         )
+
+
+
+       ),
+     ),
+   );
+  }
+
 }
