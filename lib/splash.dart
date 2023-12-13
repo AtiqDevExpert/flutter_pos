@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'login.dart';
+import 'intro.dart';
+
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -20,7 +21,7 @@ class _State extends State<Splash> {
     await Future.delayed(const Duration(milliseconds: 3500), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const Login()),
+      MaterialPageRoute(builder: (context) => const OnBoarding()),
     );
   }
 
