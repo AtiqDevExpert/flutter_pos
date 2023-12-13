@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pos/role.dart';
 import 'package:flutter_svg/svg.dart';
 import 'login.dart';
 
@@ -109,6 +110,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   contents[i].image,
                   height: 300,
                   width: 100,
+
                 ),
                 Text(
                   contents[i].title,
@@ -139,7 +141,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Login()),
+                                builder: (context) => const select_role()),
                           );
                         } else {
                           _controller.nextPage(

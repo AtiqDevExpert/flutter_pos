@@ -77,7 +77,8 @@ class HomeScreen extends StatelessWidget {
              ),),
 
              Padding(padding: const EdgeInsets.only(
-                 bottom: 50, left: 50, right: 50, top: 50),child: Container(
+                 bottom: 50, left: 50, right: 50, top: 50),
+               child: Container(
                  height: 150,width: 150,
                  decoration: BoxDecoration(
 
