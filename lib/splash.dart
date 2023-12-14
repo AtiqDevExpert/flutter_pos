@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'intro.dart';
 
-
 class Splash extends StatefulWidget {
   const Splash({super.key});
 
@@ -76,24 +75,23 @@ class _State extends State<Splash> {
               width: 200,
               decoration: BoxDecoration(
                 color: Colors.indigo,
-
                 border: Border.all(width: 0.5, color: Colors.indigo),
                 shape: BoxShape.circle,
               ),
               child: Container(
-                margin: EdgeInsets.only(top: 60),
+                  margin: EdgeInsets.only(top: 60),
                   child: Center(
-                child: Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text(
-                    '1.0.0',
-                    style: TextStyle(
-                        color: Colors.white60,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ),
-              )),
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        '1.0.0',
+                        style: TextStyle(
+                            color: Colors.white60,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  )),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 // Flutter
 import 'package:flutter/material.dart';
+
 void main() => runApp(const Login());
 
 class Login extends StatelessWidget {
@@ -61,75 +62,79 @@ class Login extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
+
                   Container(
-                    height: 20,
-                  ),
-                  TextField(
-                    onChanged: (text) {
-                      print(text);
-                    },
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      filled: true,
-                      fillColor: Colors.white,
-                      floatingLabelStyle:
-                          const TextStyle(color: Colors.black, fontSize: 24),
-                      hintText: AutofillHints.username,
-                      hintStyle:
-                          const TextStyle(color: Colors.black26, fontSize: 14),
-                      labelStyle: const TextStyle(color: Colors.black),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: const BorderSide(color: Colors.white),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: const BorderSide(color: Colors.white),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide:
-                            const BorderSide(color: Colors.black, width: 1),
+                    height: 70,
+                    width: double.infinity,
+                    margin: EdgeInsets.all(20),
+                    child: TextField(
+                      onChanged: (text) {
+                        print(text);
+                      },
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                        labelText: 'Username',
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
+                        filled: true,
+                        fillColor: Colors.white,
+                        floatingLabelStyle:
+                            const TextStyle(color: Colors.black, fontSize: 24),
+                        hintText: AutofillHints.username,
+                        hintStyle: const TextStyle(
+                            color: Colors.black26, fontSize: 14),
+                        labelStyle: const TextStyle(color: Colors.black),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: const BorderSide(color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: const BorderSide(color: Colors.white),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide:
+                              const BorderSide(color: Colors.black, width: 1),
+                        ),
                       ),
                     ),
                   ),
+
                   Container(
-                    height: 20,
-                  ),
-                  TextField(
-                    onChanged: (text) {
-                      print(text);
-                    },
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      floatingLabelBehavior: FloatingLabelBehavior.never,
-                      floatingLabelStyle:
-                          const TextStyle(color: Colors.black, fontSize: 24),
-                      labelText: 'Password',
-                      labelStyle: const TextStyle(color: Colors.black),
-                      hintText: AutofillHints.password,
-                      hintStyle:
-                          const TextStyle(color: Colors.black26, fontSize: 14),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: const BorderSide(color: Colors.white),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: const BorderSide(color: Colors.white),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide:
-                            const BorderSide(color: Colors.black, width: 1),
+                    height: 70,
+                    width: double.infinity,
+                    margin: EdgeInsets.all(20),
+                    child: TextField(
+                      onChanged: (text) {
+                        print(text);
+                      },
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
+                        filled: true,
+                        fillColor: Colors.white,
+                        floatingLabelStyle:
+                            const TextStyle(color: Colors.black, fontSize: 24),
+                        hintText: AutofillHints.password,
+                        hintStyle: const TextStyle(
+                            color: Colors.black26, fontSize: 14),
+                        labelStyle: const TextStyle(color: Colors.black),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: const BorderSide(color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: const BorderSide(color: Colors.white),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide:
+                              const BorderSide(color: Colors.black, width: 1),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: 50,
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(

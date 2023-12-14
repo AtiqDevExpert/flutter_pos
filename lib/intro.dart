@@ -27,15 +27,14 @@ class _OnBoardingState extends State<OnBoarding> {
     OnBoardingContent(
       title: 'Keep healthy work-life balance',
       image: 'assets/images/working.svg',
-      description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate'
-          'the visual form of a document or a typeface without relying on meaningful content.',
+      description:
+          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate ',
     ),
     OnBoardingContent(
       title: 'Stay organized team',
       image: 'assets/images/fries.svg',
       description:
-          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate '
-          'the visual form of a document or a typeface without relying on meaningful content.',
+          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate ',
     ),
   ];
   int currentIndex = 0;
@@ -108,15 +107,14 @@ class _OnBoardingState extends State<OnBoarding> {
                 ),
                 SvgPicture.asset(
                   contents[i].image,
-                  height: 300,
-                  width: 100,
-
+                  height: 200,
+                  width: 200,
                 ),
                 Text(
                   contents[i].title,
                   style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 30,
+                    fontSize: 24,
                     fontWeight: FontWeight.w800,
                   ),
                 ),

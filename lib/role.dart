@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'login.dart';
+
 class select_role extends StatelessWidget {
   const select_role({super.key});
 
@@ -39,76 +41,103 @@ class select_role extends StatelessWidget {
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
+
                 children: [
-                  SizedBox(height: 150,),
-                  const Text(
-                    'بنودي',
-                    style: TextStyle(
-                        color: Colors.indigo,
-                        fontSize: 80,
-                        fontWeight: FontWeight.w500),
-                  ),
-                  SizedBox(height: 50,),
-
-                  // Image.asset(
-                  //   'assets/images/logo1.png', // Add your image path
-                  //   width: 100,
-                  //   height: 100,
+                  // const Text(
+                  //   'بنودي',
+                  //   style: TextStyle(
+                  //       color: Colors.indigo,
+                  //       fontSize: 80,
+                  //       fontWeight: FontWeight.w500),
                   // ),
-
                   Container(
-                    height: 20,
-                  ),
-                  Padding(padding:EdgeInsets.all(30 ,),child:
-                  SvgPicture.asset(
-                    'assets/images/people.svg',
-                    height: 300,
-                    width: 300,
-                    color: Colors.indigo,
-                  ),
+                    height: 200,
+                    width: double.infinity,
+                    margin: EdgeInsets.only(
+                        top: 100, bottom: 20, left: 20, right: 20),
+                    child: Padding(
+                      padding: EdgeInsets.all(30),
+                      child: Image.asset(
+                        'assets/images/logo.png', // Add your image path
+                        width: 200,
+                        height: 200,
+                      ),
                     ),
+                  ),
 
                   Container(
-                    height: 20,
+                    height: 300,
+                    width: double.infinity,
+                    margin: EdgeInsets.all(10),
+                    child: Padding(
+                      padding: EdgeInsets.all(30),
+                      child: SvgPicture.asset(
+                        'assets/images/people.svg',
+                        height: 300,
+                        width: 300,
+                        color: Colors.indigo,
+                      ),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        bottom: 50, left: 50, right: 50, top: 50),
+                  InkWell(
                     child: Container(
-                        height: 80,
-                        width: 350,
-                        decoration: BoxDecoration(
-                          color: Colors.blue.shade50,
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 0.5, color: Colors.indigo),
-                          shape: BoxShape.rectangle,
-                          // boxShadow: [
-                          //   BoxShadow(color: Colors.blue.shade200,
-                          //       blurRadius: 11,
-                          //       spreadRadius: 7
-                          //   ),
-                          // ],
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/images/employee.svg',
-                              height: 40,
-                              width: 40,
-                              // color: Colors.gre,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Center(child: Text('Employee',style: TextStyle(fontSize: 12,color:Colors.black,fontWeight: FontWeight.w600),)),
-                                Center(child: Text('Login and start makinmg your attendence',style: TextStyle(fontSize: 18,color:Colors.grey,fontWeight: FontWeight.w600))),
-                              ],
-                            )
-                          ],
-                        )),
-                  ),
+                      height: 70,
+                      width: double.infinity,
+                      margin: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade50,
+                        borderRadius: BorderRadius.circular(30.0),
+                        border: Border.all(width: 0.5, color: Colors.indigo),
+                        shape: BoxShape.rectangle,
+                        // boxShadow: [
+                        //   BoxShadow(color: Colors.blue.shade200,
+                        //       blurRadius: 11,
+                        //       spreadRadius: 7
+                        //   ),
+                        // ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/images/employee.svg',
+                            height: 30,
+                            width: 20,
+                            // color: Colors.gre,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                  child: Text(
+                                'Employee',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600),
+                                textAlign: TextAlign.left,
+                              )),
+                              Center(
+                                  child: Text(
+                                      'Login and start makinmg your attendence',
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.w400))),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Login()),
+                      );
+                    },
+                  )
                 ],
               ),
             ),
