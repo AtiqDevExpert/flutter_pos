@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pos/LoginScreen.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'login.dart';
@@ -134,7 +135,7 @@ class select_role extends StatelessWidget {
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => const Login()),
+                        MaterialPageRoute(builder: (context) => const LoginScreen()),
                       );
                     },
                   )
